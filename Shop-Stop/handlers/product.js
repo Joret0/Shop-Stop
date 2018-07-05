@@ -31,6 +31,8 @@ module.exports = (req, res) => {
             res.end()
         })
     } else if (req.pathname === '/product/add' && req.method === 'POST') {
+        // Това работи когато input полето за снимка е от тип text, сега е за file и ще даде undefined
+        // аз изтрих кода дето писах за upload на file щото даваше само грешки или нищо не качваше :)
         let dataString = ''
 
         req.on('data', (data) => {
